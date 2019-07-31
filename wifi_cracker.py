@@ -30,7 +30,8 @@ sleep(5)
 # connected to the network. 
 airodump2 = 'airodump-ng -c {0} --bssid {1} -w {2} {3}'.format(channel, bssid, save, wireless_card)
 system(airodump2)
-print("please wait until you will see new cooction..")
+print("please wait until you will see new conction..")
+print("there is a option to run deou attack on the victim and then force him to reconnected")
 print colored("Handshake is captured", "green")
 print colored("Cracking the handshake with aircrack-ng is starting...", "green")
 
