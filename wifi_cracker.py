@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#author : hananel meron .
 from os import system
 from time import sleep
 from termcolor import colored
