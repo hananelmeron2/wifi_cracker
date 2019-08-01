@@ -14,6 +14,7 @@ aircrack-ng,  wireshark, crunch, term color , airodump-ng , pip , python 3.6.
 wifi adapter card
 root mode
 empty 4 way hand shake file
+wordlist file
 
 # use
 
