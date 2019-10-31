@@ -22,5 +22,5 @@ for learnig purpose only !
 
 # working environment
 
-linux ubuntu or kali (vm not recommended)
+linux ubuntu or kali (vm not recommended).
 
